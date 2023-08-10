@@ -1,0 +1,32 @@
+.products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    width: 144rem;
+    padding: $padding-desktop;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 6.4rem $padding-mobile;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 3.2rem;
+  }
+
+  &__grid {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 43rem);
+    gap: 2.4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.subscribe {
+  display: flex;
+  justify-content: center;
+  padding: $padding-desktop;
+  padding-top: 0;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.4rem $padding-mobile;
+  }
+
+  &__content {
+    width: 134rem;
+    padding: 10.4rem 6.4rem;
+    position: relative;
+    border-radius: 3.2rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 3.2rem;
+      width: 100%;
+    }
+
+    &__text {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      &__heading {
+        width: 40rem;
+        margin-right: auto;
+
+        @media only screen and (max-width: $bp-medium) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__input {
+    max-width: 40.7rem;
+    min-width: 22rem;
+    flex: 1;
+  }
+
+  &__img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+}

@@ -1,0 +1,66 @@
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: $color-white;
+  position: relative;
+
+  &__content {
+    width: 144rem;
+    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-large) {
+      padding: 1.6rem;
+    }
+
+    &__logo {
+      height: 5.6rem;
+      width: auto;
+
+      @media only screen and (max-width: $bp-large) {
+        height: 4rem;
+        width: auto;
+      }
+    }
+
+    &__list {
+      list-style: none;
+      display: flex;
+      gap: 4rem;
+
+      @media only screen and (max-width: $bp-large) {
+        display: none;
+      }
+    }
+
+    &__item {
+      margin: 0;
+      cursor: pointer;
+      text-decoration: none;
+      color: $color-body;
+      transition: all 0.1s;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__icon {
+    display: none;
+    height: 2.4rem;
+    width: 2.4rem;
+    cursor: pointer;
+
+    use {
+      pointer-events: none;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      display: block;
+      margin-left: auto;
+    }
+  }
+}

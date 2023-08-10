@@ -1,0 +1,32 @@
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &__img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: relative;
+    padding: $padding-desktop;
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+    width: 144rem;
+
+    h1 {
+      max-width: 60rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 6.4rem $padding-mobile;
+    }
+  }
+
+  &__display-text {
+    color: $color-primary;
+  }
+}

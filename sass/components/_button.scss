@@ -1,0 +1,89 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    border: none;
+    border-radius: 1.6rem;
+    transition: all 0.2s;
+    text-decoration: none;
+    padding: 2.4rem;
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    cursor: pointer;
+    color: $color-body;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.8rem;
+      padding: 1.6rem 2.4rem;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.3rem 2rem rgba(0, 0, 0, 0.2);
+  }
+
+  &:hover &-arrow {
+    transform: translateX(5px);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &-arrow {
+    width: 3.2rem;
+    height: 1.2rem;
+    stroke: $color-body;
+    transition: all 0.2s;
+
+    &--white {
+      stroke: $color-white;
+    }
+  }
+
+  &--primary {
+    background-color: $color-secondary;
+  }
+
+  &--secondary {
+    background-color: $color-body;
+  }
+
+  &--outline {
+    border: 1px solid $color-body;
+    background-color: transparent;
+  }
+}
+
+.link {
+  &,
+  &:link,
+  &:visited {
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    color: $color-body;
+  }
+
+  &:hover .btn-arrow {
+    transform: translateX(5px);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+  }
+}

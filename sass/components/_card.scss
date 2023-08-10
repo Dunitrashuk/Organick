@@ -1,0 +1,58 @@
+.card {
+  height: 58rem;
+  width: 43rem;
+  padding: 4rem;
+  border-radius: 3.2rem;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 100%;
+    padding: 2.4rem;
+  }
+
+  &__img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3.2rem 8rem;
+      width: 32rem;
+
+      border: none;
+      border-radius: 2.4rem;
+      background-color: $color-white;
+      text-decoration: none;
+      color: $color-body;
+
+      @media only screen and (max-width: $bp-small) {
+        width: 100%;
+        padding: 3.2rem 1rem;
+      }
+    }
+  }
+}

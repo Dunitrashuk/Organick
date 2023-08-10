@@ -1,0 +1,120 @@
+.footer {
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    width: 144rem;
+    padding: $padding-desktop;
+    padding-top: 0;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: $padding-mobile;
+    }
+
+    &__details {
+      display: flex;
+      justify-content: center;
+      gap: 3.2rem;
+
+      @media only screen and (max-width: $bp-largest) {
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      &__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 3rem;
+        padding: 0.8rem 1.6rem;
+        flex: 1;
+
+        &__info {
+          text-align: right;
+        }
+
+        @media only screen and (max-width: $bp-largest) {
+          align-items: flex-start;
+
+          &__info {
+            text-align: left;
+          }
+        }
+      }
+
+      &__social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+        border-left: 1px solid $color-grey-3;
+        border-right: 1px solid $color-grey-3;
+        padding: 3rem 5rem;
+        max-width: 66rem;
+
+        &__links {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2rem;
+
+          &__link {
+            background-color: $color-grey-1;
+            padding: 2rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s;
+            cursor: pointer;
+
+            svg {
+              height: 2.4rem;
+              width: 2.4rem;
+              transition: all 0.2s;
+            }
+
+            &:hover {
+              background-color: $color-grey-2;
+            }
+
+            &:hover svg {
+              transform: scale(1.2);
+            }
+          }
+        }
+        @media only screen and (max-width: $bp-largest) {
+          order: -1;
+          border: none;
+          max-width: 100%;
+          padding: 0;
+        }
+      }
+
+      &__pages {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 2.4rem;
+        flex: 1;
+        padding: 0.8rem 1.6rem;
+
+        a {
+          text-decoration: none;
+        }
+
+        h4 {
+          min-width: max-content;
+        }
+      }
+    }
+
+    &__copyright {
+      margin-top: 4.8rem;
+      border-top: 1px solid $color-grey-3;
+      padding: 1.6rem 5rem;
+      text-align: center;
+    }
+  }
+}
