@@ -2,7 +2,9 @@
   display: flex;
   justify-content: center;
   background-color: $color-white;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 
   &__content {
     width: 144rem;
