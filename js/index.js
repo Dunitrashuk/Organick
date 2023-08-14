@@ -13,10 +13,10 @@ function toggleMenu() {
   let icon = menuIcon.children[0];
 
   if (isClosed) {
-    icon.setAttribute("href", "./assets/sprite-a4e1a03c.svg#Burger");
+    icon.setAttribute("href", "./assets/svgs/sprite.svg#Burger");
     body.style.overflow = "auto";
   } else {
-    icon.setAttribute("href", "./assets/sprite-a4e1a03c.svg#Cross");
+    icon.setAttribute("href", "./assets/svgs/sprite.svg#Cross");
     menu.style.height = `calc(100vh - ${header.offsetHeight}px)`;
     body.style.overflow = "hidden";
   }
