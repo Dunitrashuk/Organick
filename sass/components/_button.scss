@@ -56,8 +56,12 @@
   }
 
   &--outline {
-    border: 1px solid $color-body;
-    background-color: transparent;
+    &,
+    &:link,
+    &:visited {
+      border: 1px solid $color-body;
+      background-color: transparent;
+    }
   }
 }
 
